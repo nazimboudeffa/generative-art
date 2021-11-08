@@ -7,8 +7,8 @@ ya = -2.0
 yb = 2.0
 
 n = 100
-imgx = 500
-imgy = 500
+imgx = 1080
+imgy = 1080
 
 image = Image.new("RGB", (imgx, imgy))
 
@@ -29,6 +29,6 @@ for x in range(imgx):
             z = z * z + c
             i += 1
             
-        image.putpixel((x, y), (i % 16 * 255, i % 16 * 255, i % 16 * 255))
+        image.putpixel((x, y), (i % 10 * 25, i % 10 * 25, i % 10 * 25))
 
-image.save("d:/generativeart/mandel.png", "PNG")
+image.show()
