@@ -1,5 +1,4 @@
 from PIL import Image
-from PIL import ImageDraw
 
 xa = -2.0
 xb = 2.0
