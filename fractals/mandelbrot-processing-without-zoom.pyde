@@ -4,6 +4,7 @@ h = 100
 s = 100
 v = 100
 a = 0
+b = 0
 b2 = 0 #new b
 a2 = 0 #new a
 b3 = 0 #original b
@@ -18,7 +19,7 @@ speedTarget = 2
 #a^2-b^2 + 2abi
  
 def setup() : 
-    size(360, 360) 
+    size(1080, 1080) 
     smooth()
     frameRate(60)
     background(200,100,100)
@@ -28,28 +29,27 @@ def draw() :
     #zoom = zoom/((speedup/100)+1)
     #speedup = ((speedup*10)+speedTarget)/11
     loadPixels();
+    
     for x in range(width):
         for y in range(height):
+            
             a = map(x,0,width,-2,2)
             b = map(y,0,height,-2,2)
             
             n = 0
             z = 0
-            
             a3 = a
             b3 = b
             
             while n < 100 :
-                a2 = (a*a) - (b*b)
-                b2 = 2*a*b
-                a = a2 + a3
-                b = b2 + b3
-                if(abs(a2 + b2) > 16):
-                    break 
-                
+                aa = (a*a) - (b*b)
+                bb = 2*a*b
+                a = aa + a3
+                b = bb + b3
+                if(abs(aa + bb) > 16):
+                    break     
                 n += 1
-            
-            
+                
             bright = map(n,0,100,0,1)
             bright = map((sqrt(bright)+(bright*20))/21,0,1,0,255) 
             if n == 100 :
