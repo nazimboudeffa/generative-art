@@ -12,6 +12,8 @@ I have anonymous accounts for NFT but this list is with the official one
 
 ## List of repos doing OSS NFT 
 
+- https://github.com/erdavids/Generative-Art
+
 ## List of resources
 
 - https://pixabay.com/images/search/painting/
